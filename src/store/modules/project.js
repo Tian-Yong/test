@@ -1,0 +1,20 @@
+export default{
+    namespaced:true,
+    state:{
+        maintainData:{maintainForm:{},Maintenance:false,},//维修档案所有数据
+        insuranceData:{insuranceForm:{},Coverage:false,},//保险档案所有数据
+        form:{outerVisible:false,}//表单组件是否显示状态
+    },
+    mutations:{
+        maintain(state,ploder){//获取维修表单数据
+            const{maintainData}=state;
+            maintainData.maintainForm=ploder;
+            console.log(maintainData.maintainForm)
+        },
+        insurance(state,ploder){//获取保险表单数据
+            const{insuranceData}=state;
+            insuranceData.insuranceForm=ploder;
+            console.log(insuranceData.insuranceForm)
+        }
+    }
+}
